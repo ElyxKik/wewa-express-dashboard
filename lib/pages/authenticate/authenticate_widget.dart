@@ -589,25 +589,6 @@ class _AuthenticateWidgetState extends State<AuthenticateWidget>
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
                                           context.pushNamed(
-                                              SupprimerCompteWidget.routeName);
-                                        },
-                                        child: Text(
-                                          'Del',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                letterSpacing: 0.0,
-                                              ),
-                                        ),
-                                      ),
-                                      InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          context.pushNamed(
                                               ForgotPasswordWidget.routeName);
                                         },
                                         child: Text(
