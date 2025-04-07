@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "628357408111",
+    "project_id": "wewa-62fe8",
+    "storage_bucket": "wewa-62fe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628357408111:android:4464ea1656d3317d7db49a",
+        "android_client_info": {
+          "package_name": "com.mycompany.dashboadwewa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628357408111-vmld3uoqf2o61p51jhrl5okbc15c8dl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEy28IWJ1Ftz5BKbV2vFD53J8HEltcuTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628357408111-vmld3uoqf2o61p51jhrl5okbc15c8dl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "628357408111-2g7tb0gom1cfb4e2iub4c4agr5o7v10h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.wewa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628357408111:android:1667ea30f350e1857db49a",
+        "android_client_info": {
+          "package_name": "com.mycompany.wewa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628357408111-vmld3uoqf2o61p51jhrl5okbc15c8dl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEy28IWJ1Ftz5BKbV2vFD53J8HEltcuTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628357408111-vmld3uoqf2o61p51jhrl5okbc15c8dl1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "628357408111-2g7tb0gom1cfb4e2iub4c4agr5o7v10h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.wewa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
