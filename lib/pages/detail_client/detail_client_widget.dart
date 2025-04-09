@@ -221,6 +221,89 @@ class _DetailClientWidgetState extends State<DetailClientWidget> {
                                                         ),
                                               ),
                                             ),
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 0.0),
+                                              child: Builder(
+                                                builder: (context) {
+                                                  if (widget.detailClient
+                                                          ?.entreprise ==
+                                                      true) {
+                                                    return InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await widget
+                                                            .detailClient!
+                                                            .reference
+                                                            .update(
+                                                                createUsersRecordData(
+                                                          entreprise: false,
+                                                        ));
+                                                      },
+                                                      child: Text(
+                                                        'Basculer vers un compte client',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  decoration:
+                                                                      TextDecoration
+                                                                          .underline,
+                                                                ),
+                                                      ),
+                                                    );
+                                                  } else {
+                                                    return InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await widget
+                                                            .detailClient!
+                                                            .reference
+                                                            .update(
+                                                                createUsersRecordData(
+                                                          entreprise: true,
+                                                        ));
+                                                      },
+                                                      child: Text(
+                                                        'Basculer vers un compte entreprise',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  decoration:
+                                                                      TextDecoration
+                                                                          .underline,
+                                                                ),
+                                                      ),
+                                                    );
+                                                  }
+                                                },
+                                              ),
+                                            ),
                                             Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 8.0),

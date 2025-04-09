@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -531,6 +532,8 @@ class _AuthenticateWidgetState extends State<AuthenticateWidget>
                                                             .signOut();
                                                         GoRouter.of(context)
                                                             .clearRedirectLocation();
+
+                                                        return;
                                                       }
                                                     },
                                                     text: 'Se connecter',
@@ -600,6 +603,282 @@ class _AuthenticateWidgetState extends State<AuthenticateWidget>
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
+                                      ),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Form(
+                                            key: _model.formKey,
+                                            autovalidateMode:
+                                                AutovalidateMode.disabled,
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                FFButtonWidget(
+                                                  onPressed: () async {
+                                                    final _datePicked1Date =
+                                                        await showDatePicker(
+                                                      context: context,
+                                                      initialDate:
+                                                          getCurrentTimestamp,
+                                                      firstDate: DateTime(1900),
+                                                      lastDate:
+                                                          getCurrentTimestamp,
+                                                      builder:
+                                                          (context, child) {
+                                                        return wrapInMaterialDatePickerTheme(
+                                                          context,
+                                                          child!,
+                                                          headerBackgroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                          headerForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .info,
+                                                          headerTextStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .headlineLarge
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Outfit',
+                                                                    fontSize:
+                                                                        32.0,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                  ),
+                                                          pickerBackgroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .secondaryBackground,
+                                                          pickerForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primaryText,
+                                                          selectedDateTimeBackgroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                          selectedDateTimeForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .info,
+                                                          actionButtonForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primaryText,
+                                                          iconSize: 24.0,
+                                                        );
+                                                      },
+                                                    );
+
+                                                    if (_datePicked1Date !=
+                                                        null) {
+                                                      safeSetState(() {
+                                                        _model.datePicked1 =
+                                                            DateTime(
+                                                          _datePicked1Date.year,
+                                                          _datePicked1Date
+                                                              .month,
+                                                          _datePicked1Date.day,
+                                                        );
+                                                      });
+                                                    } else if (_model
+                                                            .datePicked1 !=
+                                                        null) {
+                                                      safeSetState(() {
+                                                        _model.datePicked1 =
+                                                            getCurrentTimestamp;
+                                                      });
+                                                    }
+                                                  },
+                                                  text: 'Button',
+                                                  options: FFButtonOptions(
+                                                    height: 40.0,
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(16.0, 0.0,
+                                                                16.0, 0.0),
+                                                    iconPadding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 0.0),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary,
+                                                    textStyle: FlutterFlowTheme
+                                                            .of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                    elevation: 0.0,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                  ),
+                                                ),
+                                                FFButtonWidget(
+                                                  onPressed: () async {
+                                                    final _datePicked2Date =
+                                                        await showDatePicker(
+                                                      context: context,
+                                                      initialDate:
+                                                          getCurrentTimestamp,
+                                                      firstDate: DateTime(1900),
+                                                      lastDate:
+                                                          (getCurrentTimestamp ??
+                                                              DateTime(2050)),
+                                                      builder:
+                                                          (context, child) {
+                                                        return wrapInMaterialDatePickerTheme(
+                                                          context,
+                                                          child!,
+                                                          headerBackgroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                          headerForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .info,
+                                                          headerTextStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .headlineLarge
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Outfit',
+                                                                    fontSize:
+                                                                        32.0,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                  ),
+                                                          pickerBackgroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .secondaryBackground,
+                                                          pickerForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primaryText,
+                                                          selectedDateTimeBackgroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                          selectedDateTimeForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .info,
+                                                          actionButtonForegroundColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primaryText,
+                                                          iconSize: 24.0,
+                                                        );
+                                                      },
+                                                    );
+
+                                                    if (_datePicked2Date !=
+                                                        null) {
+                                                      safeSetState(() {
+                                                        _model.datePicked2 =
+                                                            DateTime(
+                                                          _datePicked2Date.year,
+                                                          _datePicked2Date
+                                                              .month,
+                                                          _datePicked2Date.day,
+                                                        );
+                                                      });
+                                                    } else if (_model
+                                                            .datePicked2 !=
+                                                        null) {
+                                                      safeSetState(() {
+                                                        _model.datePicked2 =
+                                                            getCurrentTimestamp;
+                                                      });
+                                                    }
+                                                  },
+                                                  text: 'Button',
+                                                  options: FFButtonOptions(
+                                                    height: 40.0,
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(16.0, 0.0,
+                                                                16.0, 0.0),
+                                                    iconPadding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 0.0),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary,
+                                                    textStyle: FlutterFlowTheme
+                                                            .of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                    elevation: 0.0,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                  ),
+                                                ),
+                                                FFButtonWidget(
+                                                  onPressed: () async {
+                                                    await actions.exportCSV(
+                                                      _model.datePicked1!,
+                                                      _model.datePicked2!,
+                                                    );
+                                                  },
+                                                  text: 'Telecharger',
+                                                  options: FFButtonOptions(
+                                                    height: 40.0,
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(16.0, 0.0,
+                                                                16.0, 0.0),
+                                                    iconPadding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 0.0),
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary,
+                                                    textStyle: FlutterFlowTheme
+                                                            .of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                    elevation: 0.0,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),

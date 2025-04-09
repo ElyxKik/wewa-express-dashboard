@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class AuthenticateModel extends FlutterFlowModel<AuthenticateWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final formKey = GlobalKey<FormState>();
   // State field(s) for emailAddress widget.
   FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressTextController;
@@ -15,6 +16,8 @@ class AuthenticateModel extends FlutterFlowModel<AuthenticateWidget> {
   TextEditingController? passwordTextController;
   late bool passwordVisibility;
   String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  DateTime? datePicked1;
+  DateTime? datePicked2;
 
   @override
   void initState(BuildContext context) {

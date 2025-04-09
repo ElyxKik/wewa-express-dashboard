@@ -39,6 +39,7 @@ dependencies:
   cloud_functions_platform_interface: 5.5.39
   cloud_functions_web: 4.10.4
   collection: 1.19.0
+  csv: ^5.0.2
   equatable: 2.0.5
   firebase_auth: 5.3.3
   firebase_auth_platform_interface: 7.4.9
@@ -93,6 +94,7 @@ dependencies:
   plugin_platform_interface: 2.1.8
   provider: 6.1.2
   rxdart: 0.27.7
+  share_plus: ^7.0.0
   shared_preferences: 2.3.2
   shared_preferences_android: 2.3.2
   shared_preferences_foundation: 2.5.2
@@ -108,6 +110,7 @@ dependencies:
   stream_transform: 2.1.0
   text_search: 1.0.1
   timeago: 3.6.1
+  tuple: ^2.0.0
   twilio_flutter: ^0.0.9
   url_launcher: 6.3.0
   url_launcher_android: 6.3.10
@@ -123,11 +126,13 @@ dependencies:
   cupertino_icons: ^1.0.0
 
 dependency_overrides:
+  file: 7.0.0
   google_api_headers: 4.3.4
   http: 1.2.2
   package_info_plus: 8.0.2
   package_info_plus_platform_interface: 3.0.1
   uuid: ^4.0.0
+  web: 1.1.0
 
 dev_dependencies:
   flutter_launcher_icons: 0.13.1

@@ -7,12 +7,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:628357408111:android:4464ea1656d3317d7db49a",
+        "mobilesdk_app_id": "1:628357408111:android:ab892a53e81594fc7db49a",
         "android_client_info": {
           "package_name": "com.mycompany.dashboadwewa"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "628357408111-l8f12j15sik9cbqlslvb1sbm9ta7fgog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.dashboadwewa",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
         {
           "client_id": "628357408111-vmld3uoqf2o61p51jhrl5okbc15c8dl1.apps.googleusercontent.com",
           "client_type": 3
@@ -49,6 +57,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "628357408111-qqsaf9fmmbrftk385oukgpntk2q4k0dn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.wewa",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
         {
           "client_id": "628357408111-vmld3uoqf2o61p51jhrl5okbc15c8dl1.apps.googleusercontent.com",
           "client_type": 3
